@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hampshire - Contact Us</title>
+
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GOOGLE FONTS (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <style>
+        body { background-image: url("./images/bg-texture.png") }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header-bg" style="background-image: url(images/bg-sa1.jpg);"></div>
+        <div class="main-container main-header-wrapper">
+            <div class="main-header-top">
+                <nav class="main-menu">
+                    <img src="images/HampshireNewLogo.png" class="logo"/>
+
+                    <ul id="sidemenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="broker.html">Broker</a></li>
+                        <li><a href="client.html">Client</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+            </div>
+
+            <div class="hero">
+                <h2>Get in touch with us</h2>
+                <h3>Let us know how we can help you</h3>
+                <a href="#contact" class="btn-primary">Explore</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Map Section -->
+    <section class="contact" id="contact">
+
+        <div class="contact__container">
+            <aside class="contact__aside">
+                <div class="aside__image">
+                    <img src="./images/Links.png">
+                </div>
+                <h2 class="section-title">Contact Us</h2>
+                <p>
+                    Hampshire are experts at solving whatever challenges you may be facing. Let us know what you need.
+                </p>
+                <ul class="contact__details">
+                    <li>
+                        <i class="uil uil-phone-times"></i>
+                        <h5>+27 31 582 2300</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <h5>info@hampshireind.co.za</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-location-point"></i>
+                        <h5>Durban, South Africa</h5>
+                    </li>
+                </ul>
+                <ul class="contact__socials">
+                    <li>
+                        <a href="https://www.linkedin.com/company/hampshire-independent-advisors/?originalSubdomain=za"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/HampshireIndependentAdvisors"><i class="fab fa-facebook-square""></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCsLQhpG_bIsnEk8PI2a8UtQ"><i class="fab fa-youtube-square"></i></a>
+                    </li>
+                </ul>
+            </aside>
+
+            <form action="https://formspree.io/f/xzbwlkvy" method="POST" class="contact__form">
+                <div class="form__name">
+                    <input type="text" name="First Name" placeholder="First Name" required>
+                    <input type="text" name="Last Name" placeholder="Last Name" required>
+                </div>
+                <input type="email" name="Email Address" placeholder="Your Email Address" required>
+                <input type="text" name="Phone Number" placeholder="Your Phone Number" required>
+                <textarea name="Message" rows="5" placeholder="How can we assist you?" required></textarea>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <section class="locations">
+        <div class="locations_heading">
+            <h2 class="section-title">Our Locations</h2>
+            <hr class="section-divider">
+        </div>
+    </section>
+    
+    <div class="mapContainer">
+        <div id="map"></div>    
+    </div>
+
+    <footer>
+        <div class="main-container">
+            <div class="box">
+                <h3>DISCOVER</h3>
+                <a href="index.html">Home</a>
+                <a href="broker.html">Broker</a>
+                <a href="client.html">Client</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <br>
+            <div class="social-networks">
+                <a href="https://www.linkedin.com/company/hampshire-independent-advisors/?originalSubdomain=za" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/HampshireIndependentAdvisors" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.youtube.com/channel/UCsLQhpG_bIsnEk8PI2a8UtQ" title="Youtube"><i class="fab fa-youtube-square"></i></a>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <p>Hampshire Independent (Pty) Ltd is an Authorised Financial Services Provider (Licence No. 42606)</p>
+    </footer>
+  
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-300px";
+        }
+
+        function initMap(){
+            // map options
+            var options = {
+                zoom: 6,
+                center: {lat:-29.57602, lng:24.74217}
+            }
+
+            // new map
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+            // map marker info
+            var markers = [
+                {
+                    coords:{lat:-29.72898,lng:31.07014},
+                    content:'<h3>Durban</h3><p>20 Ncondo Place<br>Ridge 6, 4th Floor<br>Umhlanga Ridge<br>Phone: +27 31 582 2300</p>'
+                },
+                {
+                    coords:{lat:-29.574762923960098,lng:30.333320250366466},
+                    content:'<h3>Pietermaritzburg</h3><p>170 Peter Brown Drive<br>18 Montrose Park Boulevard<br>Victoria Country Club Estate<br>Phone: +27 33 001 0425</p>'
+                },
+                {
+                    coords:{lat:-26.081270399973597,lng:28.01980667430744},
+                    content:'<h3>Bryanston</h3><p>37B Peter Place<br>Bryanston<br>Johannesburg<br>Phone: +27 11 875 7600</p>'
+                },
+                {
+                    coords:{lat:-33.88427580644015,lng:18.52165361262236},
+                    content:'<h3>Cape Town</h3><p>Unit A, Estuary Suites<br>Oxbow Crescent<br>Century City<br>Phone: +27 21 552 7136</p>'
+                },
+                {
+                    coords:{lat:-33.949775636313724,lng:22.434698253506987},
+                    content:'<h3>George</h3><p>Block A, 1st Floor, Eco Stop Centre<br>Heatherlands<br>George<br>Phone: +27 44 873 2873</p>'
+                },
+                {
+                    coords:{lat:-25.805101533284205,lng:28.225661560392542},
+                    content:'<h3>Pretoria</h3><p>78 Kalkoen Street<br>2nd Floor, Fountain Square<br>Monument Park<br>Phone: +27 12 942 3551</p>'
+                },
+                {
+                    coords:{lat:-29.791297506198475,lng:30.82286527087934},
+                    content:'<h3>Kloof</h3><p>68 Old Main Road<br>Kloof<br>Phone: +27 31 832 4443</p>'
+                }
+            ];
+
+            // add map markers with loop
+            for (var i = 0; i < markers.length; i++){
+                addMarker(markers[i]);
+            }
+
+            function addMarker(props){
+                var marker = new google.maps.Marker({
+                position:props.coords,
+                map:map
+                });
+
+                if (props.content){
+                    var infoWindow = new google.maps.InfoWindow({
+                        content:props.content
+                    });
+
+                    marker.addListener('click', function(){
+                        infoWindow.open(map, marker);
+                    });
+                }
+            }
+
+        }
+        $(window).on('resize', function() {
+            var currCenter = map.getCenter();
+            google.maps.event.trigger(map, 'resize');
+            map.setCenter(currCenter);
+        })
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYfF5Pdsfek7W3OBBEsTWaAL4l81qe2PI&callback=initMap&v=weekly">
+    </script>
+
+    <script src=".main.js"></script>
+
+</body>
+
+</html>
